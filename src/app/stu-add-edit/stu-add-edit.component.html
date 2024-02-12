@@ -1,0 +1,72 @@
+<div mat-dialog-title>
+  <h1 style="color: #666; text-transform: capitalize; font-size: 1.7em">
+    Ajout d'étudiant
+  </h1>
+</div>
+
+<form [formGroup]="stuForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Nom</mat-label>
+        <input matInput type="text" placeholder="Ex. LUOR"  formControlName="lastname"/>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Prénoms</mat-label>
+        <input matInput type="text" placeholder="Ex. Jim" formControlName="firstname"/>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Date de naissance</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birthdate"/>
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Ex. label@test.com" formControlName="email"/>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-radio-group aria-label="Choisir un option" formControlName="sexe">
+        <mat-label><b>Sexe:</b></mat-label>
+        <mat-radio-button value="M">Masculin</mat-radio-button>
+        <mat-radio-button value="F">Feminin</mat-radio-button>
+        <mat-radio-button value="A">Autres</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline" >
+        <mat-label>Niveau</mat-label>
+        <mat-select formControlName="level">
+          <mat-option *ngFor="let val of level" [value]="val">
+            {{ val }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>N° de matricule</mat-label>
+        <input matInput type="text" placeholder="Ex. 100I22"  formControlName="numMatricule"/>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Adresse</mat-label>
+        <input matInput type="text" placeholder="Ex. Andoharanomainty, Tana" formControlName="adress"/>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div mat-dialog-actions class="action">
+    <button mat-stroked-button color="warn" type="reset">Annuler</button>
+    <button mat-flat-button color="primary" type="submit">Ajouter</button>
+  </div>
+</form>

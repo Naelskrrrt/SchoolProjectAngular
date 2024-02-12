@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "students": [
+    {
+      "id": "7e52",
+      "lastname": "Quia voluptatem dol",
+      "firstname": "Placeat eos facilis",
+      "birthdate": "1979-01-11T21:00:00.000Z",
+      "email": "cabyvidox@mailinator.com",
+      "sexe": "F",
+      "level": "Licence 3",
+      "numMatricule": "Ut repudiandae aut d",
+      "adress": "Molestiae similique "
+    },
+    {
+      "id": "9d63",
+      "lastname": "Porro exercitationem",
+      "firstname": "Doloremque eum digni",
+      "birthdate": "1995-11-14T21:00:00.000Z",
+      "email": "makarusaj@mailinator.com",
+      "sexe": "F",
+      "level": "Master 1",
+      "numMatricule": "Itaque ut et natus m",
+      "adress": "Id exercitation con"
+    }
+  ]
+}
