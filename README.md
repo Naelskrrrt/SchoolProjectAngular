@@ -1,0 +1,2 @@
+# SchoolProjectAngular
+Student Management Project
